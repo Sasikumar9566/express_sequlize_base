@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Pickups</title>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="description" content="Pickups" />
+  <meta name="keywords" content="Pickups" />
+
+  <meta name="author" content="pickups, pickups@mailinator.com" />
+
+  <meta property="og:type" content="website" />
+  <meta name="og_site_name" property="og:site_name" content="pickups" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="author" content="Pickups" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="page-wrapper" style="
+        padding: 20px 0;
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+      ">
+    <div class="container" style="
+          width: 800px;
+          margin: 0 auto;
+          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.15);
+        ">
+      <div class="row">
+        <table class="header" style="border: none; background-color: #ffd03c; text-align: center; height: 80px; width: 100%;">
+          <tbody>
+            <tr>
+              <td colspan="1" style="width: 100%">
+                <div class="header-image" style="width: 170px; max-width: 170px; height: auto; margin: 0 auto;">
+                  <img src="http://35.182.24.82:2000/public/logo_black.png" alt="Pickups" style="width: 100%;
+            						  height: auto;" />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="mail-content" style="padding: 60px 40px;">
+          <div class="page-content" style="text-align: left;">
+            {{!-- <h1 style="font-size: 26px; color: #000; margin: 0;">
+              Hello {{user}},
+            </h1> --}}
+            <h3 style="
+                  margin: 0;
+                  font-size: 16px;
+                  color: #7d7d7d;
+                  padding: 40px 0 20px 0;
+                  font-weight: 600;
+                ">
+            You have been charged by wait time charges for {{orderRef}} please find the order details below.
+            </h3>
+            <h4 style="
+                  margin: 0;
+                  font-size: 14px;
+                  color: #615252;
+                  font-weight: 900;
+                ">
+              Category: {{category}}
+              
+            </h4>
+            <h4 style="
+                  margin: 0;
+                  font-size: 14px;
+                  color: #615252;
+                  font-weight: 900;
+                ">
+              Pickup Location: {{pickupLocation}}
+              
+            </h4>
+            <h4 style="
+                  margin: 0;
+                  font-size: 14px;
+                  color: #615252;
+                  font-weight: 900;
+                ">
+              Drop Location: {{dropLocation}}
+              
+            </h4>
+            <table style="
+                  margin: 10px;
+                  font-size: 16px;
+                  color: #7d7d7d;
+                  border-radius: 20px;
+                  width: 100%;
+                  border-collapse: collapse;
+                  border: 1px solid #7d7d7d;
+                ">
+              <thead>
+                <tr style="
+                      margin: 0;
+                      font-size: 16px;
+                      font-weight: 600;
+                      text-align: center;
+                    ">
+                  <th style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        border-top: none;
+                        font-size: 14px;
+                      ">
+                    S.No.
+                  </th>
+                  <th style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        border-top: none;
+                        font-size: 14px;
+                      ">
+                    Item Name
+                  </th>
+                  <th style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        border-top: none;
+                        font-size: 14px;
+                      ">
+                    Quantity/Dimensions
+                  </th>
+                  {{!-- <th style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        border-top: none;
+                        font-size: 14px;
+                      ">
+                    Driver Name/Number
+                  </th> --}}
+                  <th style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        border-top: none;
+                        font-size: 14px;
+                      ">
+                    Price
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#items}}
+                <tr style="margin: 0; font-size: 16px; text-align: center;">
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{id}}
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{name}}
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{length}}
+                  </td>
+                  {{!-- <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{DriverName}}/{{DriverNumber}}
+                  </td> --}}
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{-}}
+                  </td>
+                </tr>
+                {{/items}}
+                <tr style="margin: 0; font-size: 16px; text-align: center;">
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: right;
+                      " colspan="3">
+                    Sub Total
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{subTotal}}
+                  </td>
+                </tr>
+                <tr style="margin: 0; font-size: 16px; text-align: center;">
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: right;
+                      " colspan="3">
+                    HST
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{hst}}
+                  </td>
+                </tr>
+                <tr style="margin: 0; font-size: 16px; text-align: center;">
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: right;
+                      " colspan="3">
+                    Promo Code
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{promoAmt}}
+                  </td>
+                </tr>
+                <tr style="margin: 0; font-size: 16px; text-align: center;">
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: right;
+                      " colspan="3">
+                    Driver Tips
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{driverTips}}
+                  </td>
+                </tr>
+                <tr style="margin: 0; font-size: 16px; text-align: center;">
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: right;
+                      " colspan="3">
+                    Order Total
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{total}}
+                  </td>
+                  <tr style="margin: 0; font-size: 16px; text-align: center;">
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: right;
+                      " colspan="3">
+                    Waiting time charges(+HST)<br/>
+                    ({{waitingMinutes}} minute(s))
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{waitCharge}}
+                  </td>
+                </tr>
+                <tr style="margin: 0; font-size: 16px; text-align: center;">
+                  <td style="
+                        border: 1px solid #f5b2b2;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: right;
+                      " colspan="3">
+                    Total
+                  </td>
+                  <td style="
+                        border: 1px solid #7d7d7d;
+                        padding: 0.75rem;
+                        font-size: 14px;
+                      ">
+                    {{overTotal}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <small><sup>*</sup> $0.50 charge per minute </small>
+            <h2 style="color: #6F6F6F;
+                  margin: 0;
+                  padding-top: 50px;">
+              Thank you, The Pickups Team
+            </h2><br>
+            <p style="center;color: #7D7D7D;">
+              <b>Have questions</b>, we are here to help.
+            </p>
+            <p style="center;color: #7D7D7D;">
+              Contact us at <a href="mailto:customersupport@pickups.mobi">customersupport@pickups.mobi</a> or visit FAQS.
+            </p>
+          </div>
+        </div>
+        <div class="footer-info" style="background-color: #ffd03c;
+            height: 80px;
+            display: table;
+            color: #000;
+            font-size: 14px;
+            width: 100%;">
+          <p style="text-align: center;
+            width: 100%;
+            margin: 0;
+            display: table-cell;
+            vertical-align: middle;">
+            &#8471; 2020 PICKUPS All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+# Simple es6 Express js with sequlize base setup
